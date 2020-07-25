@@ -1,0 +1,8 @@
+<div>
+  <app-post [post]="post$ | async"></app-post>
+  <div *ngFor="let comment of comments$ | async" class="comment">
+    <h6>{{comment.name}}</h6>
+    <p>{{comment.body}}</p>
+    <span>{{comment.email}}</span>
+  </div>
+</div>

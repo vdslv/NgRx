@@ -1,0 +1,45 @@
+@import '../../../assets/mixins';
+
+.post {
+  padding: 10px;
+  border: 1px solid greenyellow;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  transition: all .2s ease-in-out;
+  box-shadow: 3px 3px 3px 3px #ccc;
+
+  &-buttons {
+    width: 100%;
+
+    &__delete {
+      margin-left: 1rem;
+      background-color: orangered;
+      @include default-button;
+    }
+
+    &__edit {
+      background-color: orange;
+      @include default-button;
+    }
+  }
+
+  &:hover {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 6s ease infinite;
+    background-size: 400% 400%;
+    cursor: pointer;
+    transform: scale(1.03);
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
+}

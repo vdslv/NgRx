@@ -1,0 +1,12 @@
+<form [formGroup]="postForm" class="d-flex flex-column align-items-center" (ngSubmit)="onSubmit()">
+  <label for="title">Title
+    <input id="title" type="text" formControlName="title">
+  </label>
+  <label for="body">Body
+    <input id="body" type="text" formControlName="body">
+  </label>
+  <label for="userId">UserId
+    <input id="userId" type="number" formControlName="userId">
+  </label>
+  <button type="submit" class="btn btn-primary">Create</button>
+</form>

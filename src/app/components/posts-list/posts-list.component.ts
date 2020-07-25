@@ -15,7 +15,6 @@ export class PostsListComponent implements OnInit {
   posts$: Observable<PostModel[]>;
 
   deletePost(id) {
-    console.log(id);
     this.store.dispatch(PostActions.detelePostOnServer({ id }));
   }
 

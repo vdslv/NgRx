@@ -17,6 +17,10 @@ export class ApiService {
     return this.http.delete(`${this.baseUrl}posts/${id}`);
   }
 
+  createPost(post) {
+    return this.http.post(`${this.baseUrl}posts`, { post });
+  }
+
   getComments(id: number) {
     return this.http.get(`${this.baseUrl}posts/${id}/comments`);
   }

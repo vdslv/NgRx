@@ -1,7 +1,7 @@
 <div class="post text-left d-flex flex-column" routerLink="{{post?.id}}">
   <div class="post-buttons d-flex justify-content-end">
-    <span class="post-buttons__edit d-flex justify-content-center align-items-center" (click)="onEdit()">Edit</span>
-    <span class="post-buttons__delete d-flex justify-content-center align-items-center" (click)="onDelete($event)">Delete</span>
+    <span class="post-buttons__edit d-flex justify-content-center align-items-center btn btn-info" (click)="onEdit()">Edit</span>
+    <span class="post-buttons__delete d-flex justify-content-center align-items-center btn btn-danger" (click)="onDelete($event)">Delete</span>
   </div>
   <div>
     <h5>{{post?.title}}</h5>

@@ -1,5 +1,3 @@
-@import '../../../assets/mixins';
-
 .post {
   padding: 10px;
   border: 1px solid greenyellow;
@@ -13,13 +11,6 @@
 
     &__delete {
       margin-left: 1rem;
-      background-color: orangered;
-      @include default-button;
-    }
-
-    &__edit {
-      background-color: orange;
-      @include default-button;
     }
   }
 

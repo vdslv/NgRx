@@ -14,6 +14,16 @@ const _postsReducer = createReducer(
       posts,
     };
   }),
+  on(PostActions.addPost, (state, { post }) => {
+    const {
+      id,
+      post: { body, title, userId },
+    } = post;
+    return {
+      ...state,
+      posts: [{ id, body, title, userId }, ...state.posts],
+    };
+  }),
   on(PostActions.loadCommentsSuccess, (state, { comments }) => {
     return {
       ...state,

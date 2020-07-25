@@ -14,6 +14,8 @@ import { PostComponent } from './components/post/post.component';
 import { PostsListComponent } from './components/posts-list/posts-list.component';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { CommentsComponent } from './components/comments/comments.component';
+import { FormPostComponent } from './components/form-post/form-post.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { CommentsComponent } from './components/comments/comments.component';
     PostComponent,
     PostsListComponent,
     CommentsComponent,
+    FormPostComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +36,7 @@ import { CommentsComponent } from './components/comments/comments.component';
     StoreRouterConnectingModule.forRoot(),
     HttpClientModule,
     NgbModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -23,3 +23,6 @@ export const loadCommentsSuccess = createAction(
   '[Main Page] Load Comments Success',
   props<any>()
 );
+
+export const createPost = createAction('[Post] Create New Post', props<any>());
+export const addPost = createAction('[Post] Add New Post', props<any>());

@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'posts', component: PostsListComponent },
   { path: 'posts/:id', component: CommentsComponent },
   { path: 'create', component: FormPostComponent },
+  { path: 'edit/:id', component: FormPostComponent },
   { path: '', redirectTo: '/posts', pathMatch: 'full' },
   { path: '**', redirectTo: '/posts', pathMatch: 'full' },
 ];

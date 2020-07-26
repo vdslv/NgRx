@@ -24,6 +24,23 @@ const _postsReducer = createReducer(
       posts: [{ id, body, title, userId }, ...state.posts],
     };
   }),
+  on(PostActions.updatePostSuccess, (state, { post }) => {
+    const {
+      id,
+      post: { body, title, userId },
+    } = post;
+    return {
+      ...state,
+      posts: [
+        ...state.posts.map((el) => {
+          if (el.id === id) {
+            el = { id, body, title, userId };
+          }
+          return el;
+        }),
+      ],
+    };
+  }),
   on(PostActions.loadCommentsSuccess, (state, { comments }) => {
     return {
       ...state,

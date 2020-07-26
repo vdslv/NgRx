@@ -21,6 +21,10 @@ export class ApiService {
     return this.http.post(`${this.baseUrl}posts`, { post });
   }
 
+  updatePost(post) {
+    return this.http.put(`${this.baseUrl}posts/${post.id}`, { post });
+  }
+
   getComments(id: number) {
     return this.http.get(`${this.baseUrl}posts/${id}/comments`);
   }

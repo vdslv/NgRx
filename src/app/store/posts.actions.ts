@@ -26,3 +26,8 @@ export const loadCommentsSuccess = createAction(
 
 export const createPost = createAction('[Post] Create New Post', props<any>());
 export const addPost = createAction('[Post] Add New Post', props<any>());
+export const updatePost = createAction('[Post] Update Post', props<any>());
+export const updatePostSuccess = createAction(
+  '[Post] Update Post Success',
+  props<any>()
+);

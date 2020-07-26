@@ -1,3 +1,4 @@
+<button class="btn btn-success mb-3" routerLink="posts">Back to Posts</button>
 <form [formGroup]="postForm" class="d-flex flex-column align-items-center" (ngSubmit)="onSubmit()">
   <label for="title">Title
     <input id="title" type="text" formControlName="title">
@@ -5,8 +6,8 @@
   <label for="body">Body
     <input id="body" type="text" formControlName="body">
   </label>
-  <label for="userId">UserId
+  <label for="userId" *ngIf="!post">UserId
     <input id="userId" type="number" formControlName="userId">
   </label>
-  <button type="submit" class="btn btn-primary">Create</button>
+  <button type="submit" class="btn btn-primary" [disabled]="!postForm.valid">{{post ? 'Update' : 'Create'}}</button>
 </form>

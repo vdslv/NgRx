@@ -6,6 +6,7 @@ import {
   Output,
 } from '@angular/core';
 import { PostModel } from '../../shared/models/post.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-post',
@@ -14,6 +15,8 @@ import { PostModel } from '../../shared/models/post.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PostComponent {
+  constructor(private router: Router) {}
+
   @Input() post?: PostModel;
   @Output() deleted = new EventEmitter<number>();
 
@@ -26,6 +29,6 @@ export class PostComponent {
   }
 
   onEdit() {
-    console.log(this.post.id);
+    this.router.navigate(['edit', this.post.id]);
   }
 }

@@ -16,6 +16,9 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { CommentsComponent } from './components/comments/comments.component';
 import { FormPostComponent } from './components/form-post/form-post.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditPostComponent } from './components/edit-post/edit-post.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     PostsListComponent,
     CommentsComponent,
     FormPostComponent,
+    EditPostComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +41,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     NgbModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

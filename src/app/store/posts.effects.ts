@@ -34,6 +34,16 @@ export class PostsEffects {
     )
   );
 
+  updatePost$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(PostActions.updatePost),
+      switchMap(({ body, title, userId, id }) =>
+        this.apiService.updatePost({ body, title, userId, id })
+      ),
+      map((post) => PostActions.updatePostSuccess({ post }))
+    )
+  );
+
   deletePost$ = createEffect(() =>
     this.actions$.pipe(
       ofType(PostActions.detelePostOnServer),
